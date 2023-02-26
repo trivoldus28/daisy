@@ -134,16 +134,20 @@ class FileGraphProvider(SharedGraphProvider):
         self.nodes_chunk_size = chunk_size
         self.edges_chunk_size = chunk_size
         if nodes_chunk_size is not None:
-            self.nodes_chunk_size = Coordinate(nodes_chunk_size)
+            self.nodes_chunk_size = nodes_chunk_size
         if edges_chunk_size is not None:
-            self.edges_chunk_size = Coordinate(edges_chunk_size)
+            self.edges_chunk_size = edges_chunk_size
+        self.nodes_chunk_size = Coordinate(self.nodes_chunk_size)
+        self.edges_chunk_size = Coordinate(self.edges_chunk_size)
 
         self.nodes_roi_offset = roi_offset
         self.edges_roi_offset = roi_offset
         if nodes_roi_offset is not None:
-            self.nodes_roi_offset = Coordinate(nodes_roi_offset)
+            self.nodes_roi_offset = nodes_roi_offset
         if edges_roi_offset is not None:
-            self.edges_roi_offset = Coordinate(edges_roi_offset)
+            self.edges_roi_offset = edges_roi_offset
+        self.nodes_roi_offset = Coordinate(self.nodes_roi_offset)
+        self.edges_roi_offset = Coordinate(self.edges_roi_offset)
 
         self.nodes_collection = os.path.join(
             self.directory,
