@@ -22,7 +22,7 @@ setup(
             "networkx",
             "pymongo<4",
             "tqdm",
-            "funlib.math @ git+https://github.com/funkelab/funlib.math",
-            "funlib.geometry @ git+https://github.com/funkelab/funlib.geometry",
+            "funlib.math",
+            "funlib.geometry",
         ]
 )
